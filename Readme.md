@@ -10,7 +10,7 @@
 - [x] Setup route for single article
 - [x] Build a  list view with 4 articles
 - [x] Make single article view
-- [ ] Style Article Cards
+- [x] Style Article Cards
 - [ ] Use static db to serve articles
 - [ ] Add Medium Editor features
 - [ ] Make it possible to highlight text
