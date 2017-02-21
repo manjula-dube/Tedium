@@ -1,6 +1,30 @@
-<li>
-  <h2>{{ article.name }}</h2>
-  <div class="content">
-    {{ article.body }}
-  </div>
-</li>
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+<!-- Primary Page Layout
+  ================================================== -->
+  
+  <br class="clear" />
+  
+  <div class="row">
+    <div class="twelve column">
+      <article>
+        <h2>{{ article.title }}</h2>
+        <div class="article-content">
+          {{ article.body}}
+        </div>
+        <br>
+        <p><a href="/">Back to Articles</a></p>
+      </article>
+    </div><!-- end twelve cols -->
+  </div>                                                                                                          
+ 
+   
+  
+  </div> <!--End of Container -->
+<!-- End Document
+
+
+{% endblock %}

@@ -3,6 +3,7 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import nunjucks from 'nunjucks'
+import rp from 'request-promise'
 
 let app = express()
 
@@ -20,15 +21,23 @@ const config = {
 }
 
 app.get('/', (req, res) => {
-  res.render('index', {
-    title : 'My First Nunjucks Page',
-    articles : [
-      { name : 'item #1', body: 'lorem upsdfg' },
-      { name : 'item #2', body: 'lorem upsdfg' },
-      { name : 'item #3', body: 'lorem upsdfg' },
-      { name : 'item #4', body: 'lorem upsdfg' },
-    ]
-  });
+  rp('http://jsonplaceholder.typicode.com/posts?&_limit=4')
+    .then((articles) => {
+      res.render('index', { articles: JSON.parse(articles) })
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+})
+
+app.get('/articles/:id', (req, res) => {
+  rp(`http://jsonplaceholder.typicode.com/posts/${req.params.id}`)
+  .then((article) => {
+    res.render('article', { article: JSON.parse(article) })
+  })
+  .catch((err) => {
+    console.log(err)
+  })
 })
 
 app.listen(config.port, () => {
