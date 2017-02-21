@@ -5,13 +5,14 @@
 
 - [x] Setup Express Server
 - [x] Setup routes to serve static content
-- [ ] Setup and Add Responsive Layout
-- [ ] Use Local Json Server or Faker API for articles
-- [ ] Setup route for single article
+- [x] Setup and Add Responsive Layout
+- [x] Use Local Json Server or Faker API for articles
+- [x] Setup route for single article
+- [x] Build a  list view with 4 articles
+- [x] Make single article view
+- [ ] Style Article Cards
 - [ ] Use static db to serve articles
 - [ ] Add Medium Editor features
-- [ ] Build a  list view with 4 articles
-- [ ] Make single article view
 - [ ] Make it possible to highlight text
 - [ ] Attach comments to highlighted text
 - [ ] Add Storage

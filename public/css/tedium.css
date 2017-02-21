@@ -2,17 +2,23 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background: #FAFAFA;
 }
 
 h1 {
   font-weight: 900;
   letter-spacing: 0.01em;
-  color: #292828;
+  color: #4a4a4a;
 }
 
-h2 a {
+h3 a, .excerpt a {
   text-decoration: none;
-  color: #292828;
+  color: #4a4a4a;
+  font-weight: bold;
+}
+
+.excerpt a {
+  font-weight: normal;
 }
 
 p {
@@ -24,4 +30,11 @@ p {
 
 .content {
   padding-top: 10em;
+}
+
+.article-card {
+  background: white;
+  padding: 3em;
+  box-shadow: 0 1px 4px rgba(0,0,0,.04);
+  margin-bottom: 50px;
 }

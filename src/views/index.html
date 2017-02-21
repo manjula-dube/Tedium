@@ -12,15 +12,14 @@
     <div class="twelve column">
       {% for article in articles %}
       
-      <article>
-        <h2><a href="articles/{{ article.id }}">{{ article.title }}</a></h2>
+      <article class="article-card">
+        <h3><a href="articles/{{ article.id }}">{{ article.title }}</a></h3>
         <div class="article-content">
-          {{ article.body}}
+          <p class="excerpt"><a href="articles/{{ article.id }}">{{ article.body}}</a></p>
         </div>
         <br>
         <p><a href="articles/{{ article.id }}">Read More</a></p>
       </article>
-      <hr>
       {% endfor %}
     </div><!-- end twelve cols -->
   </div>                                                                                                          
