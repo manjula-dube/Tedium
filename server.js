@@ -4,6 +4,7 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import nunjucks from 'nunjucks'
 import rp from 'request-promise'
+import Article from './src/models/article'
 
 let app = express()
 
@@ -19,6 +20,10 @@ const config = {
   port: 3001,
   env: 'dev'
 }
+
+app.get('/article', (req, res) => {
+  res.send(Article.getArticles(15))
+})
 
 app.get('/', (req, res) => {
   rp('http://jsonplaceholder.typicode.com/posts?&_limit=4')
