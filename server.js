@@ -9,7 +9,7 @@ let app = express()
 app.use(express.static(`${__dirname}/public`))
 app.set('view engine', 'html')
 
-nunjucks.configure(`${__dirname}/views`, {
+nunjucks.configure(`${__dirname}/src/views`, {
   autoescape: true,
   express   : app
 })
