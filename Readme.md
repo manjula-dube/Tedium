@@ -3,11 +3,12 @@
 
 ## Todo List for Tedium
 
-- [ ] Setup Express Server
-- [ ] Setup routes to serve static content
+- [x] Setup Express Server
+- [x] Setup routes to serve static content
+- [ ] Setup and Add Responsive Layout
 - [ ] Use Local Json Server or Faker API for articles
+- [ ] Setup route for single article
 - [ ] Use static db to serve articles
-- [ ] Add Responsive Layout
 - [ ] Add Medium Editor features
 - [ ] Build a  list view with 4 articles
 - [ ] Make single article view
