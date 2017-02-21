@@ -1,7 +1,7 @@
 
-## Tedium - a slightly more exciting version of Medium
+# Tedium - a slightly more exciting version of Medium
 
-## Todo List for Tedium
+#### Todo List for Tedium
 
 - [x] Setup Express Server
 - [x] Setup routes to serve static content
