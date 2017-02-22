@@ -4,6 +4,7 @@
 {% block content %}
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- Primary Page Layout
   ================================================== -->
@@ -39,13 +40,13 @@
       },
       extensions: {
         'highlight': new MediumButton({
-          label: 'highlight',
+          label: '<i class="fa fa-pencil" aria-hidden="true"></i>',
           start: '<span class="warning">',
           end:   '</span>'
         }),
 
         'comment': new MediumButton({
-          label:'comment',
+          label:'<i class="fa fa-commenting" aria-hidden="true"></i>',
           action: function(html, mark, parent){
                     alert(html)
                     return html
