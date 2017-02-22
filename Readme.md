@@ -12,6 +12,7 @@
 - [x] Make single article view
 - [x] Style Article Cards
 - [ ] For example, if you have 4 articles, then the user should be able to navigate from each article to the other three.
+- [ ] Annotation on highlight
 - [ ] Make it possible to highlight text
 - [ ] Attach comments to highlighted text
 - [ ] Use static db to serve articles(Not important)
