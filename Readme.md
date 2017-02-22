@@ -11,8 +11,9 @@
 - [x] Build a  list view with 4 articles
 - [x] Make single article view
 - [x] Style Article Cards
-- [ ] Use static db to serve articles
-- [ ] Add Medium Editor features
+- [ ] For example, if you have 4 articles, then the user should be able to navigate from each article to the other three.
 - [ ] Make it possible to highlight text
 - [ ] Attach comments to highlighted text
-- [ ] Add Storage
+- [ ] Use static db to serve articles(Not important)
+- [ ] Add Storage (Not important)
+- [ ] Add Medium Editor features
