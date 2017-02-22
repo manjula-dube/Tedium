@@ -3,6 +3,8 @@
 
 {% block content %}
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+
 <!-- Primary Page Layout
   ================================================== -->
   
@@ -10,7 +12,7 @@
   
   <div class="row">
     <div class="twelve column">
-      <article>
+      <article class="article-container">
         <h2>{{ article.title }}</h2>
         <div class="article-content">
           {{ article.body}}
@@ -19,12 +21,42 @@
         <p><a href="/">Back to Articles</a></p>
       </article>
     </div><!-- end twelve cols -->
+
   </div>                                                                                                          
  
    
   
   </div> <!--End of Container -->
-<!-- End Document
+
+  <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
+  <script type="text/javascript" src="https://stillhart.biz/project/MediumButton/js/medium-button.js"></script>
+
+  <script type="text/javascript">
+    var editor = new MediumEditor('.article-container', {
+      disableEditing: true,
+      toolbar: {
+        buttons: ['anchor', 'h2', 'h3', 'highlight', 'comment']
+      },
+      extensions: {
+        'highlight': new MediumButton({
+          label: 'highlight',
+          start: '<span class="warning">',
+          end:   '</span>'
+        }),
+
+        'comment': new MediumButton({
+          label:'comment',
+          action: function(html, mark, parent){
+                    alert(html)
+                    return html
+                  }
+        })
+      },
+
+    });
+
+  </script>
+
 
 
 {% endblock %}
