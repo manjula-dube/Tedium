@@ -74,7 +74,3 @@ Tedium.prototype.editor =  new MediumEditor('.article-container', {
   },
 
 });
-
-Tedium.prototype.openFormModal = () {
-
-}
