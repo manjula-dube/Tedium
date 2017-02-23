@@ -39,46 +39,6 @@
   crossorigin="anonymous"></script>
   <script src="/js/tedium.js"></script>
 
-  <script type="text/javascript">
-    var editor = new MediumEditor('.article-container', {
-      disableEditing: true,
-      toolbar: {
-        buttons: ['anchor', 'h2', 'h3', 'highlight', 'comment']
-      },
-      extensions: {
-        'highlight': new MediumButton({
-          label: '<i class="fa fa-pencil" aria-hidden="true"></i>',
-          start: '<span class="warning">',
-          end:   '</span>'
-        }),
-
-        'comment': new MediumButton({
-          label:'<i class="fa fa-commenting" aria-hidden="true"></i>',
-          action: function(html, mark, parent){
-                    openFormModal(html);
-                    return html;
-                  }
-        })
-      },
-
-    });
-
-    function openFormModal(data){
-      $("#comment-form").add();
-      $(".inline-modal").show();
-    }
-    
-
-    $("#comment-form").on('submit',function(evt){
-      debugger;
-      evt.preventDefault();
-      var commentContent = $("#comment-content").val();
-      commentContent && $("#comment-form").remove();
-      $(".comments-list").append("<li>"+commentContent+ "</li>")
-    })
-
-  </script>
-
 
 
 {% endblock %}
