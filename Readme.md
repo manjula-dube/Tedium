@@ -14,7 +14,22 @@
 - [x] For example, if you have 4 articles, then the user should be able to navigate from each article to the other three.
 - [x] Annotation on highlight
 - [x] Make it possible to highlight text
-- [ ] Attach comments to highlighted text
-- [ ] Use static db to serve articles(Not important)
-- [ ] Add Storage (Not important)
-- [ ] Add Medium Editor features
+- [x] Attach comments to highlighted text
+
+#On the frontend I used 
+  -  Jquery
+  -  Medium Editor Plugin(For Button extension). 
+      Here is the link to it - [Medium Button Extension](https://github.com/yabwe/medium-editor/tree/master/src/js/extensions)
+  
+	
+#On Backend I used 
+ - express for server side routing and serving pages.
+ - nunjucks for templating.
+ - [fake json api for article post](http://jsonplaceholder.typicode.com/posts?&_limit=4)
+ - request-promise for making http request.
+ 
+ 
+ 
+    
+  
+
