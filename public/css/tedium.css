@@ -105,7 +105,7 @@ p {
 }
 .comment-save,.cancel-save {
   float: right;
-  margin-top: 3px;
+  margin: 4px;
 }
 
 .all-comments {
@@ -198,6 +198,16 @@ p {
   font-size: 16px;
 }
 
-.container.content {
-
+.comment-form{
+  margin-bottom: 1.5rem;
+}
+::-webkit-input-placeholder {
+    font-size:18px;
+}
+:-moz-placeholder {
+    color: 18px;
+}
+.medium-editor-toolbar li button {
+    background: #4a4a4a;
+    color: white;
 }
