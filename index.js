@@ -28,7 +28,7 @@ app.get('/article', (req, res) => {
 app.get('/', (req, res) => {
   rp('http://jsonplaceholder.typicode.com/posts?&_limit=4')
     .then((articles) => {
-      res.render('index', { articles: JSON.parse(articles) })
+      res.render('index', { articles: JSON.parse(articles), bodyClass: 'home' })
     })
     .catch((err) => {
       console.log(err)
@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
 app.get('/articles/:id', (req, res) => {
   rp(`http://jsonplaceholder.typicode.com/posts/${req.params.id}`)
   .then((article) => {
-    res.render('article', { article: JSON.parse(article) })
+    res.render('article', { article: JSON.parse(article), bodyClass: 'single' })
   })
   .catch((err) => {
     console.log(err)

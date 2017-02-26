@@ -2,7 +2,14 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background: #FAFAFA;
+}
+
+body.home {
+  background: #fafafa;
+}
+
+body.single {
+  background: #fff;
 }
 
 
@@ -144,23 +151,32 @@ p {
   font-size: 15px;
   color: #888;
 }
+
 .logo{
   max-width: 100%;
   height: auto;
+  position: relative;
+  left: 4%;
 }
-.topbar{
-  margin-top:20px;
+
+.home .topbar {
+  background: white;
+  padding: 1.9em;
+  box-shadow: 1px 1px 3px #efebeb;
 }
-.current-user{
+
+.current-user {
   float:right;
 }
-.circle{
+
+.circle {
   border-radius: 50%;
   width: 10%;
   box-shadow: 1px 2px 3px 0px grey;
   position: relative;
-  right: 12px;
-  top: 12px;
+  right: 10%;
+  top: 42px;
+  width: 55px;
 }
 @media screen and (max-width: 448px) {
     .current-user{
@@ -176,4 +192,12 @@ p {
 .small-circle {
   border-radius:50%;
   width:40px;
+}
+
+.link-large {
+  font-size: 16px;
+}
+
+.container.content {
+
 }
