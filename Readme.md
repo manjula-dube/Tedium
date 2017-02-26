@@ -16,18 +16,25 @@
 - [x] Make it possible to highlight text
 - [x] Attach comments to highlighted text
 
-#On the frontend I used 
+## On the frontend I used 
   -  Jquery
   -  Medium Editor Plugin(For Button extension). 
       Here is the link to it - [Medium Button Extension](https://github.com/yabwe/medium-editor/tree/master/src/js/extensions)
   - [Skeleton css for Responsive](http://getskeleton.com/)    
   
 	
-#On Backend I used 
+## On Backend I used 
  - express for server side routing and serving pages.
  - nunjucks for templating.
  - [fake json api for article post](http://jsonplaceholder.typicode.com/posts?&_limit=4)
  - request-promise for making http request.
+ 
+ ## Setup Tedium on your dev machine:
+ 
+	npm install
+	npm run watch (To start the server)
+ 
+
  
  
  
