@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node server.js",
+    "start": "babel-node index.js",
     "watch": "nodemon -e js,html,css --exec npm run start",
-    "now-start": "node server.js"
+    "now-start": "node index.js"
   },
   "repository": {
     "type": "git",
