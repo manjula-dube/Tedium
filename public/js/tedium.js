@@ -1,3 +1,6 @@
+/*
+* Contains list of comments made on the article
+*/
 class CommentList {
 
   constructor(props) {
@@ -17,16 +20,13 @@ class CommentList {
 
 var commentBoxInstance;
 
+/*
+* Comment box container, renders the list of comments
+*/
+
 class CommentBox {
   constructor(props) {
-    this.commentList = new CommentList()
-    setTimeout(this.bindEventListeners,100);
-  }
-
-  bindEventListeners(){
-    $(".responses").focusout(() => {
-      $(this).css('display','none');
-    });
+    this.commentList = new CommentList();
   }
 
   saveComment(comment){
@@ -45,7 +45,7 @@ class CommentBox {
 
     // List of comments
     $(".response-list").html(commentElements);
-    $(".responses").css('display','block').focus();
+    $(".responses").css('display','block');
   }
 
   hideAllComments(){
@@ -92,7 +92,7 @@ class CommentForm {
     this.formEl.show()
     this.getClientRect();
     
-    //Set position of the modal
+    //Set position of the modal near to the selected text
     
 
     var $elementModal = $(this.formEl[3]);
