@@ -20,6 +20,7 @@
   -  Jquery
   -  Medium Editor Plugin(For Button extension). 
       Here is the link to it - [Medium Button Extension](https://github.com/yabwe/medium-editor/tree/master/src/js/extensions)
+  - [Skeleton css for Responsive](http://getskeleton.com/)    
   
 	
 #On Backend I used 
