@@ -3,6 +3,9 @@
 
 {% block content %}
 
+<link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <!-- Primary Page Layout
   ================================================== -->
   
@@ -10,21 +13,44 @@
   
   <div class="row">
     <div class="twelve column">
-      <article>
+      <article class="article-container">
         <h2>{{ article.title }}</h2>
         <div class="article-content">
+          {% include "side-comments.html" %}
+          {{ article.body}}
+          <br/>
+          {{ article.body}}
+          <br/>
+          <br/>
           {{ article.body}}
         </div>
         <br>
-        <p><a href="/">Back to Articles</a></p>
+       
       </article>
+
+      <div class="all-comments"> 
+        
+      </div>
     </div><!-- end twelve cols -->
+    <p><a class="link-large" href="/">Back to Articles</a></p>
   </div>                                                                                                          
- 
+   <div class="responses">
+    <span class="response-title">Responses</span>
+    <div class="response-list">
+   </div>
+   {% include "response.html" %}
    
   
   </div> <!--End of Container -->
-<!-- End Document
+
+  <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
+  <script type="text/javascript" src="https://stillhart.biz/project/MediumButton/js/medium-button.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="/js/tedium.js"></script>
+
 
 
 {% endblock %}
