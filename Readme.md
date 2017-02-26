@@ -16,7 +16,7 @@
 - [x] Make it possible to highlight text
 - [x] Attach comments to highlighted text
 
-# technologies used
+# Technologies used
 
 ## On frontend
   -  Jquery
