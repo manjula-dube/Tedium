@@ -110,4 +110,41 @@ p {
   float: right;
 }
     
+.responses {
+    z-index: 1001;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 30%;
+    border: 1px solid rgba(0,0,0,0.3);
+    background: white;
+    display: none;
+}
+
+.response {
+  border : 1px solid gray;
+  padding: 10px;
+}
+
+.response h4 {
+  padding: 0;
+  margin: 0;
+}
+
+.response .response-time {
+  color : gray;
+  font-size: 9px;
+}
+
+.responses .response-title {
+  padding: 5px;
+  font-size: 24px;
+  color : green;
+  opacity: 0.4;
+  padding: 10px;
+}
+
+.response .response-text {
+  font-size: 18px;
+}
 
