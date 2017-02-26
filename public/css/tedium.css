@@ -141,7 +141,8 @@ p {
 }
 
 .response .response-text {
-  font-size: 18px;
+  font-size: 15px;
+  color: #888;
 }
 .logo{
   max-width: 100%;
@@ -165,7 +166,14 @@ p {
     .current-user{
       display:none;
     }
-    .responses{
+    .responses {
       width:50%;
     }
+}
+.username{
+  font-size:15px;
+}
+.small-circle {
+  border-radius:50%;
+  width:40px;
 }
