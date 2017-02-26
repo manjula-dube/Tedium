@@ -4,7 +4,6 @@ import express from 'express'
 import bodyParser from 'body-parser'
 import nunjucks from 'nunjucks'
 import rp from 'request-promise'
-import Article from './src/models/article'
 
 let app = express()
 
