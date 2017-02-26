@@ -33,8 +33,11 @@
  
  ## Setup Tedium on your dev machine:
  
+	```
 	npm install
 	npm run watch (To start the server)
+	
+	```
  
 
  
