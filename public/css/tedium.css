@@ -38,10 +38,6 @@ p {
   color: #4c4b4b;
 }
 
-.content {
-  padding-top: 10em;
-}
-
 .article-card {
   background: white;
   padding: 3em;
@@ -116,13 +112,13 @@ p {
     right: 0;
     top: 0;
     width: 30%;
-    border: 1px solid rgba(0,0,0,0.3);
+    border: 1px solid #f0f0f0;
     background: white;
     display: none;
 }
 
 .response {
-  border : 1px solid gray;
+  border : 1px solid #f0f0f0;
   padding: 10px;
 }
 
@@ -138,8 +134,8 @@ p {
 
 .responses .response-title {
   padding: 5px;
-  font-size: 24px;
-  color : green;
+  font-size: 18px;
+  color : #02b875;
   opacity: 0.4;
   padding: 10px;
 }
@@ -147,4 +143,29 @@ p {
 .response .response-text {
   font-size: 18px;
 }
-
+.logo{
+  max-width: 100%;
+  height: auto;
+}
+.topbar{
+  margin-top:20px;
+}
+.current-user{
+  float:right;
+}
+.circle{
+  border-radius: 50%;
+  width: 10%;
+  box-shadow: 1px 2px 3px 0px grey;
+  position: relative;
+  right: 12px;
+  top: 12px;
+}
+@media screen and (max-width: 448px) {
+    .current-user{
+      display:none;
+    }
+    .responses{
+      width:50%;
+    }
+}
