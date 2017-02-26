@@ -165,6 +165,7 @@ class CommentForm {
 
     // Destroy after adding comment
     this.destroy();
+    commentBoxInstance.showAllComments();
   }
 }
 
