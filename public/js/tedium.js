@@ -20,6 +20,13 @@ var commentBoxInstance;
 class CommentBox {
   constructor(props) {
     this.commentList = new CommentList()
+    setTimeout(this.bindEventListeners,100);
+  }
+
+  bindEventListeners(){
+    $(".responses").focusout(() => {
+      $(this).css('display','none');
+    });
   }
 
   saveComment(comment){
@@ -38,7 +45,11 @@ class CommentBox {
 
     // List of comments
     $(".response-list").html(commentElements);
-    $(".responses").css('display','block');
+    $(".responses").css('display','block').focus();
+  }
+
+  hideAllComments(){
+    $(".responses").css('display','none');
   }
 
   renderComment(comment) {
@@ -189,4 +200,9 @@ Tedium.prototype.editor =  new MediumEditor('.article-container', {
     })
   }
 
+});
+
+$(".article-container").on("click",(evt) => {
+  // On clicking on the article container,  remove the comment section
+  commentBoxInstance.hideAllComments();
 });
