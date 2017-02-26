@@ -20,27 +20,59 @@ class CommentModal {
 
 class CommentForm {
   constructor(template) {
+
     var $jQueryObject = $($.parseHTML(template))
     this.formEl = $jQueryObject
-
-    this.bindEventListeners()
+    this.timeStamp = +(new Date) // Timestamp unique for the modal
+    this.formEl.attr("id", this.timeStamp)
+    this.formEl.insertAfter(".article-content");
+    this.getClientRect();
+    this.bindEventListeners();
   }
 
-  show() {
 
+  show() {
     this.formEl.show()
+    this.clientRect = this.getClientRect();
+  }
+
+  getClientRect() {
+    var s = window.getSelection(),
+    oRange = s.getRangeAt(0), //get the text range
+    oRect = oRange.getBoundingClientRect();
+
+    // Consider page scroll while determining position of the selected text
+    return {
+      top : oRect.top + document.body.scrollTop
+    };
   }
 
   bindEventListeners() {
-    $("#comment-form").on('submit',(evt) => { this.submit(evt) })
+    this.formEl.on('submit',(evt) => { this.submit(evt) })
   }
 
   submit(evt) {
     console.log('submitting')
     evt.preventDefault();
-    var commentContent = $("#comment-content").val();
-    commentContent && $("#comment-form").remove();
-    $(".comments-list").append("<li>"+commentContent+ "</li>")
+    var commentContent = this.formEl.find("#comment-content").val();
+    commentContent && this.formEl.find("#comment-form").remove();
+
+    var id = 'comment-' + commentContent + '-' + this.timeStamp;
+
+    // Create new Comment component
+    var newComment = $("<div>", {
+      id : id,
+    }).html('<i class="fa fa-star" aria-hidden="true"></i> You responded here');
+
+    $(".all-comments").append(newComment);
+    newComment.css('position', 'absolute');
+
+    // offset() function calls reflow of the DOM. Wait before the actual DOM reflow
+    setTimeout(function(ctxt) {
+        newComment.offset({
+        top : ctxt.clientRect.top
+      });
+    },10,this);
   }
 }
 
@@ -49,7 +81,10 @@ const Tedium = function() {
 }
 
 Tedium.openFormModal = () => {
-   $($('.inline-modal-wrapper').html()).clone().insertAfter('.article-content').css('display', 'block')
+   
+   var commentFormInstance = new CommentForm($('.inline-modal-wrapper').html());
+   commentFormInstance.show();
+
 }
 
 Tedium.prototype.editor =  new MediumEditor('.article-container', {
@@ -67,10 +102,11 @@ Tedium.prototype.editor =  new MediumEditor('.article-container', {
     'comment': new MediumButton({
       label:'<i class="fa fa-commenting" aria-hidden="true"></i>',
       action: (html, mark, parent) => {
+              console.log(html , ' ' , mark , ' ' )
                 Tedium.openFormModal();
                 return html;
               }
     })
-  },
+  }
 
 });
