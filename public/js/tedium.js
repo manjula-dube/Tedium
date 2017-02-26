@@ -181,7 +181,7 @@ Tedium.openFormModal = () => {
 }
 
 Tedium.prototype.editor =  new MediumEditor('.article-container', {
-  disableEditing: true,
+  disableEditing: false,
   toolbar: {
     buttons: ['h2', 'h3', 'highlight', 'comment']
   },
