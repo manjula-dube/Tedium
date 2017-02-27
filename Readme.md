@@ -18,6 +18,8 @@
 - [x] Text is Editable on single article page
 - [x] Add H2 & H3 tags in annotation pop up (Extra)
 
+Thanks [Amit](https://twitter.com/amit_tushar) for Tedium Logo used in the Project
+
 # Technologies used
 
 ## On frontend
@@ -40,6 +42,8 @@
 	npm run watch (To start the server)
 	
 	```
+	
+	
  
 
  
