@@ -14,7 +14,9 @@
 - [x] For example, if you have 4 articles, then the user should be able to navigate from each article to the other three.
 - [x] Annotation on highlight
 - [x] Make it possible to highlight text
-- [x] Attach comments to highlighted text
+- [x] Implement attach comment feature
+- [x] Text is Editable on single article page
+- [x] Add H2 & H3 tags in annotation pop up (Extra)
 
 # Technologies used
 
