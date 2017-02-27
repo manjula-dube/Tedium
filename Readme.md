@@ -17,8 +17,9 @@
 - [x] Implement attach comment feature
 - [x] Text is Editable on single article page
 - [x] Add H2 & H3 tags in annotation pop up (Extra)
+- [x] Now for deployment
 
-Thanks [Amit](https://twitter.com/amit_tushar) for Tedium Logo used in the Project
+Thanks [Amit](https://twitter.com/amit_tushar) for Tedium Logo (It was just the way I wanted)
 
 # Technologies used
 
