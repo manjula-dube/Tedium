@@ -35,6 +35,10 @@ Thanks [Amit](https://twitter.com/amit_tushar) for Tedium Logo used in the Proje
  - [fake json api for article post](http://jsonplaceholder.typicode.com/posts?&_limit=4)
  - request-promise for making http request.
  
+ ##Deployment url
+-  [Used now for deployment](https://www.npmjs.com/package/now)
+ 
+ 
  ## Setup Tedium on your dev machine:
  
 	```
