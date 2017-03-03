@@ -16,3 +16,5 @@
 - [ ] Make it possible to highlight text
 - [ ] Attach comments to highlighted text
 - [ ] Add Storage
+
+Thanks [Amit](https://twitter.com/amit_tushar) for Tedium Logo (It was just the way I wanted)
