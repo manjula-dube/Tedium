@@ -1,5 +1,5 @@
 
-# Tedium - a slightly more exciting version of Medium
+# Tedium - a slightly more exciting version of Medium.
 
 #### Todo List for Tedium
 
@@ -9,8 +9,8 @@
 - [x] Use Local Json Server or Faker API for articles
 - [x] Setup route for single article
 - [x] Build a  list view with 4 articles
-- [x] Make single article view
-- [x] Style Article Cards
+- [x] Make single article view route
+- [x] Style Article Cards both single page & list of articles
 - [x] For example, if you have 4 articles, then the user should be able to navigate from each article to the other three.
 - [x] Annotation on highlight
 - [x] Make it possible to highlight text
